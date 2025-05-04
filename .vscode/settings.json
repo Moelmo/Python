@@ -2,5 +2,5 @@
     "discord.customButtonText": "View Repository",
     "discord.customButtonUrl": "https://github.com/Moelmo",
     "discord.customButtonEnabled": true,
-    "discord.customButtonHoist": "below"
+    "discord.customButtonHoist": "above"
 }
