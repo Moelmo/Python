@@ -1,2 +1,3 @@
 # Python
-Nyoba hal baru rek
+Random projek python buatan sendiri
+semoga berguna
