@@ -10,10 +10,11 @@ print("1. Penjumlahan")
 print("2. Pengurangan") 
 print("3. Perkalian")
 print("4. Pembagian")
-print("5. Keluar")
+print("5. Sisa Pembagian")
+print("6. Keluar")
 print("==========================\n")
 while True:
-    kalkulasi = (input("Masukkan pilihan (1/2/3/4/5): "))
+    kalkulasi = (input("Masukkan pilihan (1/2/3/4/5/6): "))
     if kalkulasi == "1":
         try:
             tambah1 = int(input("Masukkan angka pertama: "))
@@ -50,6 +51,17 @@ while True:
         except ValueError:
             print("input tidak valid, silahkan masukkan angka")
     elif kalkulasi == "5":
+        try:
+            sisa1 = int(input("Masukkan angka pertama: "))
+            sisa2 = int(input("Masukkan angka kedua: "))
+            if sisa2 == 0:
+                print("Pembagian dengan nol tidak diperbolehkan")
+            else:
+                hasil = sisa1 % sisa2
+                print(f"Hasil sisa pembagian {sisa1} % {sisa2} = {hasil}")
+        except ValueError:
+            print("input tidak valid, silahkan masukkan angka")
+    elif kalkulasi == "6":
         print("Terima kasih telah menggunakan kalkulator sederhana")
         break
     else:
