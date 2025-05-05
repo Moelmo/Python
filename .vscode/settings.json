@@ -1,6 +1,20 @@
 {
-    "discord.customButtonText": "View Repository",
-    "discord.customButtonUrl": "https://github.com/Moelmo",
-    "discord.customButtonEnabled": true,
-    "discord.customButtonHoist": "above"
+    //aktifkan discord rpc
+    "discord.enabled": true,
+
+    //tampilan discord rpc
+    "discord.workspaceElapsedTime": true,
+    "discord.detailsEditing": "Editing: {filename}",
+    "discord.detailsIdle": "Idle in {workspace}",
+    "discord.largeImage": "vscode",
+    "discord.lowerDetailsEditing": "Workspace: {workspace}",
+    "discord.lowerDetailsIdle": "Taking a break",
+
+    // button status discord rpc
+    "discord.ricPresence.buttons": [
+        {
+            "label" : "View Repository",
+            "url" : "https://github.com/Moelmo"
+        }
+    ]
 }
