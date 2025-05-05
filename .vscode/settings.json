@@ -1,20 +1,25 @@
 {
-    //aktifkan discord rpc
+    // Aktifkan Discord Rich Presence
     "discord.enabled": true,
-
-    //tampilan discord rpc
+  
+    // Tampilkan project yang sedang dikerjakan
     "discord.workspaceElapsedTime": true,
-    "discord.detailsEditing": "Editing: {file}",
+    "discord.detailsEditing": "Editing: {filename}",
     "discord.detailsIdle": "Idle in {workspace}",
     "discord.largeImage": "vscode",
     "discord.lowerDetailsEditing": "Workspace: {workspace}",
     "discord.lowerDetailsIdle": "Taking a break",
-
-    // button status discord rpc
-    "discord.ricPresence.buttons": [
-        {
-            "label" : "View Repository",
-            "url" : "https://github.com/Moelmo"
-        }
+  
+    // Tambahkan tombol di bawah status Discord
+    "discord.richPresence.buttons": [
+      {
+        "label": "View Repository",
+        "url": "https://github.com/Moelmo"
+      },
+      {
+        "label": "Follow Me",
+        "url": ""
+      }
     ]
-}
+  }
+  
