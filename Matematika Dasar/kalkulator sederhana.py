@@ -11,10 +11,11 @@ print("2. Pengurangan")
 print("3. Perkalian")
 print("4. Pembagian")
 print("5. Sisa Pembagian")
-print("6. Keluar")
+print("6. Semua Operasi Perbandingan")
+print("7. Keluar")
 print("==========================\n")
 while True:
-    kalkulasi = (input("Masukkan pilihan (1/2/3/4/5/6): "))
+    kalkulasi = (input("Masukkan pilihan (1/2/3/4/5/6/7): "))
     if kalkulasi == "1":
         try:
             tambah1 = int(input("Masukkan angka pertama: "))
@@ -62,6 +63,31 @@ while True:
         except ValueError:
             print("input tidak valid, silahkan masukkan angka")
     elif kalkulasi == "6":
+        try:
+            angka1 = int(input("Masukkan angka pertama: "))
+            angka2 = int(input("Masukkan angka kedua: "))
+            lebih_besar = angka1 > angka2
+            lebih_kecil = angka1 < angka2
+            sama_dengan = angka1 == angka2
+            tidak_sama = angka1 != angka2
+            lebihb_sama = angka1 >= angka2
+            lebihk_sama = angka1 <= angka2
+            print("==========================")
+            print("Operasi Perbandingan")
+            print("===== | lebih besar | =====")
+            print(f"angka {angka1} lebih besar dari {angka2} : {angka1} > {angka2} = {lebih_besar}")
+            print(f"angka {angka1} lebih besar sama dari {angka2} : {angka1} >= {angka2} = {lebihb_sama}")
+            print("===== | lebih kecil | =====")
+            print(f"angka {angka1} lebih kecil dari {angka2} : {angka1} < {angka2} = {lebih_kecil}")
+            print(f"angka {angka1} lebih kecil sama dari {angka2} : {angka1} <= {angka2} = {lebihk_sama}")
+            print("===== | sama dengan | =====")
+            print(f"angka {angka1} sama dengan {angka2} : {angka1} == {angka2} = {sama_dengan}")
+            print(f"angka {angka1} tidak sama dengan {angka2} : {angka1} != {angka2} = {tidak_sama}")
+            print("==========================")
+        except ValueError:
+            print("input tidak valid, silahkan makukkan angka")
+
+    elif kalkulasi == "7":
         print("Terima kasih telah menggunakan kalkulator sederhana")
         break
     else:
