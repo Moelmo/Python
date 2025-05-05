@@ -4,7 +4,7 @@
 
     //tampilan discord rpc
     "discord.workspaceElapsedTime": true,
-    "discord.detailsEditing": "Editing: {filename}",
+    "discord.detailsEditing": "Editing: {file}",
     "discord.detailsIdle": "Idle in {workspace}",
     "discord.largeImage": "vscode",
     "discord.lowerDetailsEditing": "Workspace: {workspace}",
