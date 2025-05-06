@@ -30,3 +30,12 @@ while True:
     elif konversi == "2":
         print("Terima kasih telah menggunakan kalkulator konversi bilangan.")
         break
+
+
+# versi simple
+
+a = int(input("Masukkan angka : "))
+print(f"Bilangan Desimal      : {a}")
+print(f"Bilangan Biner        :", bin(a)[2:])
+print(f"Bilangan Oktal        :", oct(a)[2:])
+print(f"Bilangan Heksadesimal :", hex(a)[2:])
