@@ -37,3 +37,20 @@ else:
 # jika nilai A itu True maka jawabanya False, jika nilai A itu False maka jawabanya True, jadi NOT itu membalikkan nilai dari A, jika A itu True maka jawabanya False dan sebaliknya
 
 # contohnya if not punya_ktp: print(jaweban), artinya jika tidak punya ktp maka jawabanya false atau kebalikannya
+
+# operator Tenary
+# "?"
+aku = suka = True
+kamu = tidak = False
+kita = suka & tidak
+print("\nkita saling suka" if kita else "kita tidak saling suka\n")
+
+umur = int(input("Masukkan umur anda: "))
+if umur < 12:
+    print("Masih bocah")
+elif umur < 15:
+    print("Remaja")
+else:
+    print("Dewasa")
+
+print("\nBocah" if umur < 12 else "Remaja" )
