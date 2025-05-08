@@ -1,7 +1,12 @@
 {
-  "vscord.status.buttons.button1.active.enabled": true,
-  "vscord.status.buttons.button1.active.label": "View Repository",
-  "vscord.status.buttons.button1.active.url": "https://github.com/Moelmo",
-  "vscord.status.buttons.button1.enabled": false,
-  "vscord.status.buttons.button1.git.active.enabled": false
+  "vscord.details": "Editing Code",
+  "vscord.state": "In Visual Studio Code",
+  "vscord.largeImageText": "VS Code",
+  "vscord.smallImageText": "Coding Time",
+  "vscord.buttons": [
+      {
+      "label": "View Repository",
+      "url": "https://github.com/Moelmo"
+      }
+  ]
 }
