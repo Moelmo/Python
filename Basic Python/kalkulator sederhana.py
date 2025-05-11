@@ -1,4 +1,5 @@
 # kalkulator tambah kurang kali bagi sederhana
+kalkulasi = 0
 
 print("==========================")
 print("Kalkulator Sederhana")
@@ -12,10 +13,10 @@ print("3. Perkalian")
 print("4. Pembagian")
 print("5. Sisa Pembagian")
 print("6. Semua Operasi Perbandingan")
-print("7. Keluar")
+print("9. Keluar")
 print("==========================\n")
-while True:
-    kalkulasi = (input("Masukkan pilihan (1/2/3/4/5/6/7): "))
+while kalkulasi != 9:
+    kalkulasi = (input("Masukkan pilihan (1/2/3/4/5/6/9): "))
     if kalkulasi == "1":
         try:
             tambah1 = int(input("Masukkan angka pertama: "))
@@ -87,7 +88,7 @@ while True:
         except ValueError:
             print("input tidak valid, silahkan makukkan angka")
 
-    elif kalkulasi == "7":
+    elif kalkulasi == "9":
         print("Terima kasih telah menggunakan kalkulator sederhana")
         break
     else:

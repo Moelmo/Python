@@ -15,3 +15,9 @@ for row in range(height):
             print(' ', end='')
     print()
     
+
+
+for ulang in range(1,20):
+    if ulang == 10:
+        break
+    print(ulang)
