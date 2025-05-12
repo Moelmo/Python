@@ -8,5 +8,9 @@
       "label": "View Repository",
       "url": "https://github.com/Moelmo"
       }
-  ]
+  ],
+  "discord.customButtonEnabled": true,
+  "discord.customButtonHoist":"above",
+  "discord.customButtonText": "View Repository",
+  "discord.customButtonUrl": "https://github.com/Moelmo"
 }
