@@ -1,14 +1,4 @@
 {
-  "vscord.details": "Editing Code",
-  "vscord.state": "In Visual Studio Code",
-  "vscord.largeImageText": "VS Code",
-  "vscord.smallImageText": "Coding Time",
-  "vscord.buttons": [
-      {
-      "label": "View Repository",
-      "url": "https://github.com/Moelmo"
-      }
-  ],
   "discord.customButtonEnabled": true,
   "discord.customButtonHoist":"above",
   "discord.customButtonText": "View Repository",
