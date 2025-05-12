@@ -1,6 +1,8 @@
 # aplikasi topup versi terminal untuk membuat logic sebelum ke web
 
 
+def pulsa():
+    print("pulsa")
 
 def main():
     print("############################################")
@@ -20,7 +22,8 @@ def main():
     while produk != 9:
         produk = input("Pilih produk anda yang ingin di beli : ")
         if produk == "1":
-            print("Pulsa")
+            pulsa()
+            break
         else:
             print("Masukkan input yang benar")
 
