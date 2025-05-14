@@ -100,6 +100,8 @@ Lihat kategori berat badan:
 
 """)
 
+#Rumus Broca
+
 st.markdown("""---""")
 
 st.markdown("<h3 style='text-align: center;'>Broca (Ideal Body Weight)</h3>", unsafe_allow_html=True)
@@ -117,7 +119,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown("<h4 style='text-align: center;'>Masukkan Jenis Kelamin anda</h4>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center;'>Masukkan Jenis Kelamin anda</h5>", unsafe_allow_html=True)
 
 gender = st.radio("",
     ["Laki - Laki", "Perempuan"],
@@ -132,24 +134,67 @@ if gender == "Laki - Laki":
 else:
     Ngender = 0.15
 
-st.markdown("<h4 style='text-align: center;'>Masukkan tinggi badan anda</h4>", unsafe_allow_html=True)
-Tinggi_Broca = st.number_input("")
-Tinggi_Broca = int(Tinggi_Broca)
+st.markdown("<h5 style='text-align: center;'>Masukkan tinggi badan anda</h5>", unsafe_allow_html=True)
+Tinggi_Broca = st.number_input(" ", value=None, placeholder="Masukkan tinggi badan mu minimal 150 ke atas, maksimal 200")
 
-if st.button("Cek", icon="✅"):
-    if Tinggi_Broca <= 150:
-        st.warning("Masukkan Tinggi Badan Anda Minimal 150 Ke Atas")
+if st.button("Cek 1", icon="✅", key="Broca"):
+    if Tinggi_Broca:
+        if Tinggi_Broca <= 150:
+            st.warning("Masukkan Tinggi Badan Anda Minimal 150 Ke Atas")
+        elif  Tinggi_Broca >= 210:
+            st.warning("Emang tinggi badan lu di atas 200cm?")
+        else:
+            Tinggi_Broca = int(Tinggi_Broca)
+            Hasil = (Tinggi_Broca - 100) - ((Tinggi_Broca - 100) * Ngender)
+            st.markdown("<h5 style='text-align: center;'>Hasil</h5>", unsafe_allow_html=True)
+            st.write(f"""
+                    Jenis Kelamin   : {gender}\n
+                    Tinggi badan    : {Tinggi_Broca}cm\n
+                    Hasil           : {Hasil} Kg""")
+            st.success(f"Berat badan idealmu sekitar {Hasil} Kg")
     else:
-        Hasil = (Tinggi_Broca - 100) - ((Tinggi_Broca - 100) * Ngender)
+        st.warning("Masukkan Angka Terlebih Dahulu", icon="⚠️")
+
+st.markdown("---")
+
+# Rumus BIM
+
+st.markdown("<h3 style='text-align: center;'>BIM (Body Mass Index)</h3>", unsafe_allow_html=True)
+
+st.markdown("<h5 style='text-align: center;'>Masukkan tinggi badan anda</h5>", unsafe_allow_html=True)
+tinggi_bim_m = st.number_input("", value=None, placeholder="Masukkan tinggi badan anda minimal 100, maksimal 200")
+st.markdown("<h5 style='text-align: center;'>Masukkan berat badan anda</h5>", unsafe_allow_html=True)
+berat_bim = st.number_input("", value=None, placeholder="Masukkan berat badan anda")
+if st.button("Cek 2", icon="✅", key="BIM"):
+    if tinggi_bim_m:
+        if tinggi_bim_m <= 100:
+            st.warning("Masukkan tinggi badan lebih dari 100cm", icon="⚠️")        
+    else:
+        st.warning("Masukkan tinggi badan terlebih dahulu", icon="⚠️")
+    if berat_bim == None:
+        st.warning("Masukkan berat badan terlebih dahulu", icon="⚠️")
+    if tinggi_bim_m and berat_bim:
+        tinggi_bim = tinggi_bim_m / 100
+        berat_bim = int(berat_bim)
+        bim = berat_bim / tinggi_bim ** 2
+        if bim < 18.5:
+            hasil = "Kurus"
+        elif 18.5 <= bim < 25:
+            hasil = "Ideal"
+        elif 25 <= bim < 30:
+            hasil = "Gemuk"
+        else:
+            hasil = "Obesitas"
+        
         st.markdown("<h5 style='text-align: center;'>Hasil</h5>", unsafe_allow_html=True)
         st.write(f"""
-                Jenis Kelamin : {gender}\n
-                Tinggi badan : {Tinggi_Broca}\n
-                Hasil : {Hasil} Kg""")
-        st.success(f"Berat badan idealmu sekitar {Hasil} Kg")
-
-
-
+            Tinggi Badan Anda        : {tinggi_bim_m}\n
+            Berat Badan Anda         : {berat_bim}\n
+            Hasil Kondisi Badan Anda : {hasil}
+        """)
+        st.success(f"Kondisi Badanmu Sekarang : {hasil}")
+# else:
+#     st.error("Masukkan Angka Terlebih Dahulu", icon="⚠️")
 
 # COPYRIGHT
 
