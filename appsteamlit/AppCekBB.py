@@ -45,10 +45,56 @@ st.markdown("""
         unsafe_allow_html=True
 )
 
+st.markdown("""---""")
+
 with st.expander("Cara penggunaan"):
     st.write("""Rumus BIM (Body Mass Index)
-BIM mengukur proporsi berat badan dengan tinggi badan.\n""")
-with st.expander("Show"):
-    st.write("tes")
-with st.expander("Show"):
-    st.write("tes")
+BIM mengukur proporsi berat badan dengan tinggi badan.\nRumus Broca (Ideal Body Weight)
+Broca menghitung berat badan ideal berdasarkan tinggi""")
+with st.expander("BIM"):
+    st.write("""
+
+    ✅ Cara Menggunakan Rumus BIM
+Ukur berat badan dalam kilogram (kg).
+Contoh: 60 kg
+
+Ukur tinggi badan dalam meter (m).
+Contoh: 1,65 m
+
+Masukkan ke rumus:
+
+BIM = Berat / (Tinggi x Tinggi)
+BIM = 60 / (1,65 x 1,65) = 22,04
+Lihat kategori berat badan:
+
+< 18,5 = Kurus
+
+18,5–24,9 = Normal
+
+25–29,9 = Gemuk
+
+≥ 30 = Obesitas
+
+""")
+with st.expander("Broca"):
+    st.write("""
+
+✅ Cara Menggunakan Rumus Broca
+Ukur tinggi badan dalam cm.
+Contoh: 160 cm
+
+Gunakan rumus sesuai jenis kelamin:
+
+Pria:
+(Tinggi - 100) - 10% dari hasil
+= (160 - 100) - 10% = 60 - 6 = 54 kg
+
+Wanita:
+(Tinggi - 100) - 15% dari hasil
+= (160 - 100) - 15% = 60 - 9 = 51 kg
+
+Hasil = berat badan ideal.
+""")
+    
+st.markdown("""---""")
+    
