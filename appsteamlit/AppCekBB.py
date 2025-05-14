@@ -137,7 +137,7 @@ else:
 st.markdown("<h5 style='text-align: center;'>Masukkan tinggi badan anda</h5>", unsafe_allow_html=True)
 Tinggi_Broca = st.number_input(" ", value=None, placeholder="Masukkan tinggi badan mu minimal 150 ke atas, maksimal 200")
 
-if st.button("Cek 1", icon="✅", key="Broca"):
+if st.button("Cek Broca", icon="✅", key="Broca"):
     if Tinggi_Broca:
         if Tinggi_Broca <= 150:
             st.warning("Masukkan Tinggi Badan Anda Minimal 150 Ke Atas")
@@ -165,7 +165,7 @@ st.markdown("<h5 style='text-align: center;'>Masukkan tinggi badan anda</h5>", u
 tinggi_bim_m = st.number_input("", value=None, placeholder="Masukkan tinggi badan anda minimal 100, maksimal 200")
 st.markdown("<h5 style='text-align: center;'>Masukkan berat badan anda</h5>", unsafe_allow_html=True)
 berat_bim = st.number_input("", value=None, placeholder="Masukkan berat badan anda")
-if st.button("Cek 2", icon="✅", key="BIM"):
+if st.button("Cek BIM", icon="✅", key="BIM"):
     if tinggi_bim_m:
         if tinggi_bim_m <= 100:
             st.warning("Masukkan tinggi badan lebih dari 100cm", icon="⚠️")        
@@ -193,8 +193,6 @@ if st.button("Cek 2", icon="✅", key="BIM"):
             Hasil Kondisi Badan Anda : {hasil}
         """)
         st.success(f"Kondisi Badanmu Sekarang : {hasil}")
-# else:
-#     st.error("Masukkan Angka Terlebih Dahulu", icon="⚠️")
 
 # COPYRIGHT
 
