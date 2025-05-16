@@ -37,3 +37,5 @@ def menu():
             break
         else:
             print("Input Tidak Valid")
+
+menu()
