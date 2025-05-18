@@ -1,6 +1,41 @@
 # simple live chat
 import time
 
+chatlist = []
+
+waktu = time.localtime()
+jam = waktu.tm_hour
+menit = waktu.tm_min
+detik = waktu.tm_sec
+
+
+def livechat(username):
+    while True:
+        pesan = input("Masukkan pesan : ")
+        if pesan == "s":
+            menu()
+            break
+
+        waktu = time.localtime()
+        jam = waktu.tm_hour
+        menit = waktu.tm_min
+        detik = waktu.tm_sec
+
+        timetamp = f"{jam}:{menit}:{detik}"
+
+        chatlist.append({
+            "waktu": timetamp,
+            "username" : username,
+            "pesan" : pesan
+        })
+        print("\n" * 25)
+        print("=======================================")
+        for log in chatlist:
+            print(f"[{log["waktu"]}][{log["username"]}]: {log["pesan"]}")
+        print("=======================================")
+        if len(chatlist) > 14:
+            chatlist.pop(0)
+
 # login register sistem 
 def register():
     username = input("Masukkan username : ")
@@ -23,6 +58,7 @@ def login():
         saved_password = saved_password.strip()
         if username == saved_username and password == saved_password:
             print("Login Berhasil\n")
+            livechat(username)
             return
     print("Login gagal. Username atau password salah.\n")
 
@@ -43,5 +79,7 @@ def menu():
             break
         else:
             print("masukkan input 1/2/3")
+
+
 
 menu()
