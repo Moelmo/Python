@@ -1,40 +1,60 @@
 # simple live chat
 import time
 
+
 chatlist = []
 
-waktu = time.localtime()
-jam = waktu.tm_hour
-menit = waktu.tm_min
-detik = waktu.tm_sec
+#chattlog sistem
+def save_chatlog():
+    with open("chatlog.txt", "w") as file:
+        for message in chatlist:
+            file.write(f"{message['waktu']}, {message['username']}, {message['pesan']}\n")
 
+def load_chatlog():
+    try:
+        with open("chatlog.txt", "r") as file:
+            lines = file.readline()
+            for line in lines:
+                parts = line.strip().split(", ", 2)
+                if len(parts) == 3:
+                    chatlist.append({
+                        "waktu" : parts[0],
+                        "username" : parts[1],
+                        "pesan" : parts[2]           
+                        })
+    except FileNotFoundError:
+        open("chatlog.txt", "w").close()
+
+#live chat sitem
 
 def livechat(username):
     while True:
         pesan = input("Masukkan pesan : ")
-        if pesan == "s":
+        if pesan.lower() == "s":
+            save_chatlog()
             menu()
             break
 
         waktu = time.localtime()
-        jam = waktu.tm_hour
-        menit = waktu.tm_min
-        detik = waktu.tm_sec
-
-        timetamp = f"{jam}:{menit}:{detik}"
+        timetamp = f"{waktu.tm_hour}:{waktu.tm_min}:{waktu.tm_sec}"
 
         chatlist.append({
-            "waktu": timetamp,
+            "waktu" : timetamp,
             "username" : username,
             "pesan" : pesan
         })
+
+        #display chat
         print("\n" * 25)
-        print("=======================================")
+        print("==========================================")
         for log in chatlist:
             print(f"[{log["waktu"]}][{log["username"]}]: {log["pesan"]}")
-        print("=======================================")
+        print("==========================================")
+
+        #batas chat
         if len(chatlist) > 14:
             chatlist.pop(0)
+
 
 # login register sistem 
 def register():
@@ -63,6 +83,7 @@ def login():
     print("Login gagal. Username atau password salah.\n")
 
 def menu():
+    load_chatlog()
     while True:
         print("===== Main Menu =====")
         print("1. Login")
@@ -75,6 +96,7 @@ def menu():
         elif choice == "2":
             register()
         elif choice == "3":
+            save_chatlog()
             print("Keluar")
             break
         else:
@@ -82,4 +104,5 @@ def menu():
 
 
 
-menu()
+if __name__ == "__main__":
+    menu()
