@@ -3,10 +3,10 @@ from tkinter import messagebox
 
 # Data produk (bisa diganti sesuai kebutuhan)
 produk = {
-    "Nasi Goreng": 15000,
-    "Mie Ayam": 12000,
-    "Es Teh": 5000,
-    "Jus Alpukat": 10000
+    "Bakso": 6000,
+    "Mie Ayam": 6000,
+    "Es Teh": 2500,
+    "Es Jeruk": 3000
 }
 
 keranjang = {}
