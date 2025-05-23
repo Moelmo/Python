@@ -3,4 +3,3 @@ import time
 
 chatlist = []
 
-st.write
