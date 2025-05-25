@@ -1,30 +1,19 @@
-# aplikasi topup versi terminal untuk membuat logic sebelum ke web
-
-
+# aplikasi toptup pulsa e wallet dan lain lain
 def pulsa():
-    print("pulsa")
+    print("Pulsa")
 
-def main():
-    print("############################################")
-    print("Hallo Selamat Datang Di Aplikasi Top-Up Kami")
-    print("############################################\n")
-    print("List Produk Kami Yang Tersedia")
+def menu():
+    print("########################################################")
+    print("############# Selamat datang di Moel Store #############")
+    print("########################################################")
+    print("Silahkan pilih produk kami yang ingin anda beli\n")
     print("1. Pulsa")
     print("2. Paket Data")
     print("3. E-Wallet")
-    print("4. Tranfer Bank")
-    print("5. Game")
+    print("4. TopUp Game")
     print("9. Keluar")
-    print("############################################\n")
+    print("########################################################")
+    while  chose != 9:
+        chose = input("Pilih menu : (1/2/3/4/9)")
 
-    produk = 0 
-
-    while produk != 9:
-        produk = input("Pilih produk anda yang ingin di beli : ")
-        if produk == "1":
-            pulsa()
-            break
-        else:
-            print("Masukkan input yang benar")
-
-main()
+menu()
