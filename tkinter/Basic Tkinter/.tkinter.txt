@@ -9,6 +9,11 @@
 
 8. window.w = Menu(master, option=value)
 9. Comboox
+10. Scale = w=Scale(master, option=value)
+11. TopLevel = w=TopLevel(master, option=value)
+12. Message = w=Message(master, option=value)
+13. MenuButton = w=MenuButton(master, option=value)
+
 
 r =  master
 
