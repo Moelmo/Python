@@ -13,6 +13,11 @@
 11. TopLevel = w=TopLevel(master, option=value)
 12. Message = w=Message(master, option=value)
 13. MenuButton = w=MenuButton(master, option=value)
+14. Progressbar 
+15. SpinBox = w=SpinBox(master, option=value)
+16. text = w=Text(master, option=value)
+17. Canvas = w=Canvas(master, option=value)
+18. PaneedWindow = w=PannedWindow(master, option=value)
 
 
 r =  master
