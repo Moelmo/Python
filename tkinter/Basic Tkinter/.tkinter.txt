@@ -1,0 +1,15 @@
+1. Label = w=Label(master, option=value) Judul
+2. Button = w=Button(master, option=value) Tombol interaski
+3. Entry = w=Entry(master, option=value) input text
+- checklist
+4. w = CheckButton(master, option=value)
+5. w = RadioButton(master, option=value)
+6. w = Listbox(master, option=value)
+7. w = Scrollbar(master, option=value)
+
+8. window.w = Menu(master, option=value)
+9. 
+
+r =  master
+
+source : https://www.geeksforgeeks.org/python-gui-tkinter/
