@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import *
+import time
 
 r = tk.Tk()
 r.title("Kalkulator")
