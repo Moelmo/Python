@@ -2,6 +2,9 @@ import tkinter as tk
 from tkinter import *
 import time
 
+
+#kalkulator sederhana
+
 r = tk.Tk()
 r.title("Kalkulator")
 
