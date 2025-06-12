@@ -1,5 +1,8 @@
 import random
 
+scorep = 0
+scoreb = 0
+
 while True:
     isi = ["Kertas", "Batu", "Gunting"]
     p = isi.copy()
@@ -10,7 +13,8 @@ while True:
     try:
         pilih = int(input("Pilih 1/2/3/4 : "))
         if pilih == 4:
-            print("Terimakasih sudah bermain")
+            print("\n\n\nTerimakasih sudah bermain")
+            print(f"Score Player/Computer : {scorep}/{scoreb}")
             break
         if pilih not in [1,2,3]:
             print("Pilihan tidak valid")
@@ -24,8 +28,10 @@ while True:
             print("Hasilnya : Seri\n")
         elif (ph == "Kertas" and Com == "Batu") or (ph == "Batu" and Com == "Gunting") or (ph == "Gunting" and Com == "Kertas"):
             print("Player Menang\n")
+            scorep += 1
         else:
             print("Computer Menang\n")
+            scoreb += 1
 
 
     except ValueError:
