@@ -10,7 +10,6 @@ hasil_label = tk.Label(r)
 jawaban = tk.Entry(r, width=20)
 framejawaban = tk.Frame(r)
 
-
 # global variable
 hasilb = 0
 score = 0
