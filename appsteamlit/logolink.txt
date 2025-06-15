@@ -1,0 +1,17 @@
+<a href="https://ibb.co/W4BsHpr9"><img src="https://i.ibb.co/7drbSN3c/20240707-054444.png" alt="20240707-054444" border="0"></a>
+https://i.ibb.co/7drbSN3c/20240707-054444.png
+
+
+st.set_page_config(page_title="Name")
+
+st.markdown(
+    """
+    <!-- Meta tags untuk preview saat dibagikan -->
+    <meta property="og:title" content="Name">
+    <meta property="og:description" content="Website untuk mengecek dan berbagi outfit kamu.">
+    <meta property="og:image" content="https://i.ibb.co/7drbSN3/20240707-054444.png">
+    <meta property="og:url" content="https://fitcheck.streamlit.app/">
+    <meta name="twitter:card" content="summary_large_image">
+    """,
+    unsafe_allow_html=True
+)

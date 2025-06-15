@@ -2,6 +2,20 @@ import streamlit as st
 import random 
 import time
 
+#image link
+st.set_page_config(page_title="TebakAngkaByMoelmo")
+st.markdown(
+    """
+    <meta property="og:title" content="Game tebak angka by Moelmo">
+    <meta property="og:description" content="game berhadiah jika 1x percobaan berhasil">
+    <meta property="og:image" content="https://i.ibb.co/7drbSN3/20240707-054444.png">
+    <meta property="og:url" content="https://fitcheck.streamlit.app/">
+    <meta name="twitter:card" content="summary_large_image">
+    """,
+    unsafe_allow_html=True
+)
+
+
 st.title("Game#1")
 st.header("Tebak angka 1 sampai 100")
 
