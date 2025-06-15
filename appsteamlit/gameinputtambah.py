@@ -1,5 +1,6 @@
 import streamlit as st 
 import random
+import time
 
 
 if "soal" not in st.session_state:
@@ -22,15 +23,17 @@ if st.session_state.soal == (0,0):
 a, b = st.session_state.soal
 st.write(f"#### Soal : {a} + {b} = ...")
 
-jawaban = st.text_input("pilih jawaban yang benar")
+st.text_input("pilih jawaban yang benar", key="jawaban")
 if st.button("Submit"):
     try:
-        if int(jawaban) == st.session_state.hasil:
+        if int(st.session_state.jawaban) == st.session_state.hasil:
             st.success("jawaban anda benar")
             soal()
+            time.sleep(1.5)
             st.rerun()
         else:
             st.error("Jawaban anda salah")
     except ValueError:
         st.warning("Masukkan input yang benar")
+    
 
