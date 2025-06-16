@@ -21,6 +21,7 @@ if "tambah" not in st.session_state:
     st.session_state.hasil = -1
     st.session_state.jawaban_benar = 0
     st.session_state.jawaban_salah = 0
+    st.session_state.attemp = 0
 
 def mulai():
     st.session_state.tambah_a = random.randint(1,10)
@@ -59,9 +60,15 @@ for i, p in enumerate(pilihan):
         if p == st.session_state.hasil:
             st.success(f"Jawaban anda benar {st.session_state.tambah_a} + {st.session_state.tambah_b} = {st.session_state.hasil}")
             time.sleep(1.5)
+            st.session_state.jawaban_benar += 1
             mulai()
             st.rerun()
+        elif st.session_state.attemp == 1:
+            st.warning("g")
         else:
             st.error("Jawaban anda salah")
+            st.session_state.jawaban_salah += 1
+            st.session_state.attemp += 1
 
 st.markdown("---")
+st.write(f"{st.session_state.jawab_benar}/{st.session_state.jawab_salah}")
