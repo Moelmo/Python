@@ -7,3 +7,4 @@ time.sleep(2)
 waktu = end - mulai
 print(f"{waktu:.2f}")
 
+
