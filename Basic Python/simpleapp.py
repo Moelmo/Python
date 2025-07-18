@@ -64,16 +64,17 @@ def persegi(username):
         print(f"[{days} | {timestamp}]: Hasil {luas} x {luas} adalah {hasil}")
         with open("act_log_simpleapp.txt", "a") as file:
             file.write(f"[{days} | {timestamp}] User : {username} | Hasil : {hasil}\n")
+        pilih = input("\nLanjut/Keluar [t/s] :")
+        if pilih == "s":
+            menu()
+        elif pilih == "t":
+            persegi(username)
+        else:
+            print("Masukkan input yang benar")
+
     except ValueError:
         print("Masukkan angka yang benar")
         persegi(username)
-    pilih = input("\nLanjut/Keluar [t/s] :")
-    if pilih == "s":
-        menu()
-    elif pilih == "t":
-        persegi(username)
-    else:
-        print("Masukkan input yang benar")
 
 
 def lingkaran(username):
@@ -83,16 +84,17 @@ def lingkaran(username):
         print(f"[{days} | {timestamp}]: Luas Lingkaran : {luas:.2f}")
         with open("act_log_simpleapp.txt", "a") as file:
             file.write(f"[{days} | {timestamp}] User : {username} | Hasil : {luas:.2f}\n")
+        pilih = input("\nLanjut/Keluar [t/s] : ")
+        if pilih == "s":
+            menu()
+        elif pilih == "t":
+            lingkaran(username)
+        else:
+            print("Masukkan input yang benar")
     except ValueError:
         print("MAsukkan angka yang benar bukan huruf")
         lingkaran(username)
-    pilih = input("\nLanjut/Keluar [t/s] : ")
-    if pilih == "s":
-        menu()
-    elif pilih == "t":
-        lingkaran(username)
-    else:
-        print("Masukkan input yang benar")
+
 
 def cekgg(username):
     try:
@@ -106,6 +108,8 @@ def cekgg(username):
             with open("act_log_simpleapp.txt") as file:
                 file.write(f"[{days} | {timestamp}] User : {username} | Hasil {angka} Ganjil\n")
         print("\n")
+
+        
         pilih = input("\nLanjut/Keluar [t/s] : ")
         if pilih == "s":
             menu()
