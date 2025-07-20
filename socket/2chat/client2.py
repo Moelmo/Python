@@ -5,7 +5,7 @@ client.connect(('localhost', 12345))
 
 while True:
     # kirim pesan ke server
-    pesan = input("Client1: ")
+    pesan = input("Client2: ")
     client.sendall(pesan.encode())
     if pesan.lower() == "exit":
         break
