@@ -4,6 +4,13 @@ import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
 
+# global data
+name = "Moelmo"
+score = 0
+high_score = 0 
+last_score = 0
+dificulty = None #default
+
 # scirpt
 def quit():
     pilihan = messagebox.askyesno("Keluar", "Anda Ingin Keluar?")
@@ -44,11 +51,19 @@ btn_quit.pack(pady=5)
 frame1.pack(fill="both", expand=True)
 
 # ======================================
-# Halaman singleplayer
+# Halaman singleplayer and stats
 frame2 = tk.Frame(root, bg="#263238")
-
 sig_title = tk.Label(frame2, text="SinglePlayer", bg="#263238", fg="white", font=("Arial", 16, "bold"))
 sig_title.pack(pady=20)
+
+sig_name = tk.Label(frame2, text=f"{name}", bg="#263238", fg="white", font=("Arial", 10, "bold"))
+sig_name.pack(pady=1)
+
+sig_stats = tk.Label(frame2, text=f"Score : {score}\nDificulty: {dificulty}", bd=2, relief="groove", width=15, bg="white", font=("Arial", 8))
+sig_stats.pack(pady=1)
+
+sig_setting = tk.Button(frame2, text="Setting", width=15, height=1, activebackground="green", activeforeground="white")
+sig_setting.pack(pady=1)
 
 sig_quit = tk.Button(frame2, text="Back", width=15, height=1, activebackground="red", activeforeground="white", command=sing_back)
 sig_quit.pack(pady=5)

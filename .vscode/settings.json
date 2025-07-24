@@ -2,5 +2,7 @@
   "discord.customButtonEnabled": true,
   "discord.customButtonHoist":"above",
   "discord.customButtonText": "View Repository",
-  "discord.customButtonUrl": "https://github.com/Moelmo"
+  "discord.customButtonUrl": "https://github.com/Moelmo",
+  "editor.parameterHints.enabled": false
+
 }
