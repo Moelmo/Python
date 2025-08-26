@@ -3,6 +3,8 @@
   "discord.customButtonHoist":"above",
   "discord.customButtonText": "View Repository",
   "discord.customButtonUrl": "https://github.com/Moelmo",
-  "editor.parameterHints.enabled": false
+  "editor.parameterHints.enabled": false,
+  "python-envs.defaultEnvManager": "ms-python.python:system",
+  "python-envs.pythonProjects": []
 
 }
